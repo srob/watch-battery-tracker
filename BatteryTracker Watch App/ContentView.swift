@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = BatteryViewModel()
+    @EnvironmentObject var viewModel: BatteryViewModel
 
     var body: some View {
         let now = Date()
