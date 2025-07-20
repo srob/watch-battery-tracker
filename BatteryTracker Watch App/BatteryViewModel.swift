@@ -21,12 +21,14 @@ class BatteryViewModel: ObservableObject {
     private var timer: Timer?
     private let historyKey = "batteryHistory"
 
-    init() {
+    init(skipInitialLog: Bool = false) {
         WKInterfaceDevice.current().isBatteryMonitoringEnabled = true
         self.batteryLevel = WKInterfaceDevice.current().batteryLevel
         self.batteryState = WKInterfaceDevice.current().batteryState
         loadHistory()
-        logBatteryEntry()
+        if !skipInitialLog {
+            logBatteryEntry()
+        }
         startTimer()
     }
 

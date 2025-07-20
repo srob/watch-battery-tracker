@@ -4,6 +4,9 @@ struct ContentView: View {
     @StateObject var viewModel = BatteryViewModel()
 
     var body: some View {
+        let now = Date()
+        let twentyFourHoursAgo = Calendar.current.date(byAdding: .hour, value: -24, to: now) ?? now
+        let filteredHistory = viewModel.history.filter { $0.timestamp >= twentyFourHoursAgo }
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
                 Text("Battery Tracker")
@@ -18,13 +21,13 @@ struct ContentView: View {
                     .font(.subheadline)
                     .padding(.top, 4)
 
-                BatteryChartView(history: viewModel.history)
+                BatteryChartView(history: filteredHistory)
 
-                if viewModel.history.isEmpty {
+                if filteredHistory.isEmpty {
                     Text("No battery history yet.")
                         .foregroundColor(.secondary)
                 } else {
-                    ForEach(viewModel.history.reversed(), id: \.id) { entry in
+                    ForEach(filteredHistory.reversed(), id: \.id) { entry in
                         HStack {
                             Text(entry.timestamp, style: .time)
                                 .font(.footnote)
