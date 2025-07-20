@@ -11,7 +11,8 @@
 		772294E62E2D0E120037EEB2 /* copilot-instructions.md in Resources */ = {isa = PBXBuildFile; fileRef = 772294C22E2D0E120037EEB2 /* copilot-instructions.md */; };
 		775C4CE12E2D01EA00D5507A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE02E2D01EA00D5507A /* README.md */; };
 		775C4CE32E2D02A500D5507A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE22E2D02A500D5507A /* .gitignore */; };
-		7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+                7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+                F331D4D11111F111B7E098EF /* BatteryWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B388EB7011789AE0C3612358 /* BatteryWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,27 +30,45 @@
 			remoteGlobalIDString = 778749592E2BC70200A8F70C;
 			remoteInfo = "BatteryTracker Watch App";
 		};
-		778749742E2BC70400A8F70C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7787494E2E2BC70200A8F70C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 778749592E2BC70200A8F70C;
-			remoteInfo = "BatteryTracker Watch App";
-		};
+                778749742E2BC70400A8F70C /* PBXContainerItemProxy */ = {
+                        isa = PBXContainerItemProxy;
+                        containerPortal = 7787494E2E2BC70200A8F70C /* Project object */;
+                        proxyType = 1;
+                        remoteGlobalIDString = 778749592E2BC70200A8F70C;
+                        remoteInfo = "BatteryTracker Watch App";
+                };
+                2726C5175EEF0F916FBC4DA5 /* PBXContainerItemProxy */ = {
+                        isa = PBXContainerItemProxy;
+                        containerPortal = 7787494E2E2BC70200A8F70C /* Project object */;
+                        proxyType = 1;
+                        remoteGlobalIDString = C0BD75290DD68083775D14DF /* BatteryWidget */;
+                        remoteInfo = BatteryWidget;
+                };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		778749802E2BC70400A8F70C /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                778749802E2BC70400A8F70C /* Embed Watch Content */ = {
+                        isa = PBXCopyFilesBuildPhase;
+                        buildActionMask = 2147483647;
+                        dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+                        dstSubfolderSpec = 16;
+                        files = (
+                                7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */,
+                        );
+                        name = "Embed Watch Content";
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
+                D6C42DF23EB40D52DE8FFD77 /* Embed App Extensions */ = {
+                        isa = PBXCopyFilesBuildPhase;
+                        buildActionMask = 2147483647;
+                        dstPath = "";
+                        dstSubfolderSpec = 13;
+                        files = (
+                                F331D4D11111F111B7E098EF /* BatteryWidget.appex in Embed App Extensions */,
+                        );
+                        name = "Embed App Extensions";
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +79,8 @@
 		778749542E2BC70200A8F70C /* BatteryTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BatteryTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		778749692E2BC70400A8F70C /* BatteryTracker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BatteryTracker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BatteryTracker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+                778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BatteryTracker Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+                B388EB7011789AE0C3612358 /* BatteryWidget.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = BatteryWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -74,11 +94,16 @@
 			path = "BatteryTracker Watch AppTests";
 			sourceTree = "<group>";
 		};
-		778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "BatteryTracker Watch AppUITests";
-			sourceTree = "<group>";
-		};
+                778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */ = {
+                        isa = PBXFileSystemSynchronizedRootGroup;
+                        path = "BatteryTracker Watch AppUITests";
+                        sourceTree = "<group>";
+                };
+                C3AC4C0C50D45CA928AE9EFF /* BatteryWidget */ = {
+                        isa = PBXFileSystemSynchronizedRootGroup;
+                        path = BatteryWidget;
+                        sourceTree = "<group>";
+                };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +121,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		778749702E2BC70400A8F70C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                778749702E2BC70400A8F70C /* Frameworks */ = {
+                        isa = PBXFrameworksBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
+                D89D2A84C25C8FCC5CD4BABF /* Frameworks */ = {
+                        isa = PBXFrameworksBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,9 +163,10 @@
 				775C4CE02E2D01EA00D5507A /* README.md */,
 				7787495E2E2BC70200A8F70C /* BatteryTracker Watch App */,
 				7787496C2E2BC70400A8F70C /* BatteryTracker Watch AppTests */,
-				778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
-				778749552E2BC70200A8F70C /* Products */,
-			);
+                                778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
+                                C3AC4C0C50D45CA928AE9EFF /* BatteryWidget */,
+                                778749552E2BC70200A8F70C /* Products */,
+                        );
 			sourceTree = "<group>";
 		};
 		778749552E2BC70200A8F70C /* Products */ = {
@@ -142,8 +175,9 @@
 				778749542E2BC70200A8F70C /* BatteryTracker.app */,
 				7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */,
 				778749692E2BC70400A8F70C /* BatteryTracker Watch AppTests.xctest */,
-				778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */,
-			);
+                               778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */,
+                                B388EB7011789AE0C3612358 /* BatteryWidget.appex */,
+                        );
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -172,11 +206,12 @@
 		778749592E2BC70200A8F70C /* BatteryTracker Watch App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7787497D2E2BC70400A8F70C /* Build configuration list for PBXNativeTarget "BatteryTracker Watch App" */;
-			buildPhases = (
-				778749562E2BC70200A8F70C /* Sources */,
-				778749572E2BC70200A8F70C /* Frameworks */,
-				778749582E2BC70200A8F70C /* Resources */,
-			);
+                        buildPhases = (
+                                778749562E2BC70200A8F70C /* Sources */,
+                                778749572E2BC70200A8F70C /* Frameworks */,
+                                778749582E2BC70200A8F70C /* Resources */,
+                                D6C42DF23EB40D52DE8FFD77 /* Embed App Extensions */,
+                        );
 			buildRules = (
 			);
 			dependencies = (
@@ -214,29 +249,52 @@
 			productReference = 778749692E2BC70400A8F70C /* BatteryTracker Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		778749722E2BC70400A8F70C /* BatteryTracker Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 778749872E2BC70400A8F70C /* Build configuration list for PBXNativeTarget "BatteryTracker Watch AppUITests" */;
-			buildPhases = (
-				7787496F2E2BC70400A8F70C /* Sources */,
-				778749702E2BC70400A8F70C /* Frameworks */,
-				778749712E2BC70400A8F70C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				778749752E2BC70400A8F70C /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
-			);
-			name = "BatteryTracker Watch AppUITests";
-			packageProductDependencies = (
-			);
-			productName = "BatteryTracker Watch AppUITests";
-			productReference = 778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
+                778749722E2BC70400A8F70C /* BatteryTracker Watch AppUITests */ = {
+                        isa = PBXNativeTarget;
+                        buildConfigurationList = 778749872E2BC70400A8F70C /* Build configuration list for PBXNativeTarget "BatteryTracker Watch AppUITests" */;
+                        buildPhases = (
+                                7787496F2E2BC70400A8F70C /* Sources */,
+                                778749702E2BC70400A8F70C /* Frameworks */,
+                                778749712E2BC70400A8F70C /* Resources */,
+                        );
+                        buildRules = (
+                        );
+                        dependencies = (
+                                778749752E2BC70400A8F70C /* PBXTargetDependency */,
+                        );
+                        fileSystemSynchronizedGroups = (
+                                778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
+                        );
+                        name = "BatteryTracker Watch AppUITests";
+                        packageProductDependencies = (
+                        );
+                        productName = "BatteryTracker Watch AppUITests";
+                        productReference = 778749732E2BC70400A8F70C /* BatteryTracker Watch AppUITests.xctest */;
+                        productType = "com.apple.product-type.bundle.ui-testing";
+                };
+                C0BD75290DD68083775D14DF /* BatteryWidget */ = {
+                        isa = PBXNativeTarget;
+                        buildConfigurationList = 99F7D2B2BB3AB105866AC4B3 /* Build configuration list for PBXNativeTarget "BatteryWidget" */;
+                        buildPhases = (
+                                92A909A236EBE19787625381 /* Sources */,
+                                D89D2A84C25C8FCC5CD4BABF /* Frameworks */,
+                                F658669F07B01B6B36AE361B /* Resources */,
+                        );
+                        buildRules = (
+                        );
+                        dependencies = (
+                                16289AAE2D48249C3404323A /* PBXTargetDependency */,
+                        );
+                        fileSystemSynchronizedGroups = (
+                                C3AC4C0C50D45CA928AE9EFF /* BatteryWidget */,
+                        );
+                        name = BatteryWidget;
+                        packageProductDependencies = (
+                        );
+                        productName = BatteryWidget;
+                        productReference = B388EB7011789AE0C3612358 /* BatteryWidget.appex */;
+                        productType = "com.apple.product-type.app-extension";
+                };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,11 +315,14 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 778749592E2BC70200A8F70C;
 					};
-					778749722E2BC70400A8F70C = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 778749592E2BC70200A8F70C;
-					};
-				};
+                                       778749722E2BC70400A8F70C = {
+                                               CreatedOnToolsVersion = 16.4;
+                                               TestTargetID = 778749592E2BC70200A8F70C;
+                                       };
+                                        C0BD75290DD68083775D14DF = {
+                                                CreatedOnToolsVersion = 16.4;
+                                        };
+                                };
 			};
 			buildConfigurationList = 778749512E2BC70200A8F70C /* Build configuration list for PBXProject "BatteryTracker" */;
 			developmentRegion = en;
@@ -280,8 +341,9 @@
 				778749532E2BC70200A8F70C /* BatteryTracker */,
 				778749592E2BC70200A8F70C /* BatteryTracker Watch App */,
 				778749682E2BC70400A8F70C /* BatteryTracker Watch AppTests */,
-				778749722E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
-			);
+                               778749722E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
+                                C0BD75290DD68083775D14DF /* BatteryWidget */,
+                        );
 		};
 /* End PBXProject section */
 
@@ -311,13 +373,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		778749712E2BC70400A8F70C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                778749712E2BC70400A8F70C /* Resources */ = {
+                        isa = PBXResourcesBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
+                F658669F07B01B6B36AE361B /* Resources */ = {
+                        isa = PBXResourcesBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -335,13 +404,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7787496F2E2BC70400A8F70C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+                7787496F2E2BC70400A8F70C /* Sources */ = {
+                        isa = PBXSourcesBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
+                92A909A236EBE19787625381 /* Sources */ = {
+                        isa = PBXSourcesBuildPhase;
+                        buildActionMask = 2147483647;
+                        files = (
+                        );
+                        runOnlyForDeploymentPostprocessing = 0;
+                };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -355,11 +431,16 @@
 			target = 778749592E2BC70200A8F70C /* BatteryTracker Watch App */;
 			targetProxy = 7787496A2E2BC70400A8F70C /* PBXContainerItemProxy */;
 		};
-		778749752E2BC70400A8F70C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 778749592E2BC70200A8F70C /* BatteryTracker Watch App */;
-			targetProxy = 778749742E2BC70400A8F70C /* PBXContainerItemProxy */;
-		};
+                778749752E2BC70400A8F70C /* PBXTargetDependency */ = {
+                        isa = PBXTargetDependency;
+                        target = 778749592E2BC70200A8F70C /* BatteryTracker Watch App */;
+                        targetProxy = 778749742E2BC70400A8F70C /* PBXContainerItemProxy */;
+                };
+                16289AAE2D48249C3404323A /* PBXTargetDependency */ = {
+                        isa = PBXTargetDependency;
+                        target = C0BD75290DD68083775D14DF /* BatteryWidget */;
+                        targetProxy = 2726C5175EEF0F916FBC4DA5 /* PBXContainerItemProxy */;
+                };
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -629,26 +710,73 @@
 			};
 			name = Debug;
 		};
-		778749892E2BC70400A8F70C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9DM8L58T3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.scrumcenter.BatteryTracker-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "BatteryTracker Watch App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.5;
-			};
-			name = Release;
-		};
+                778749892E2BC70400A8F70C /* Release */ = {
+                        isa = XCBuildConfiguration;
+                        buildSettings = {
+                                CODE_SIGN_STYLE = Automatic;
+                                CURRENT_PROJECT_VERSION = 1;
+                                DEVELOPMENT_TEAM = Y9DM8L58T3;
+                                GENERATE_INFOPLIST_FILE = YES;
+                                MARKETING_VERSION = 1.0;
+                                PRODUCT_BUNDLE_IDENTIFIER = "com.scrumcenter.BatteryTracker-Watch-AppUITests";
+                                PRODUCT_NAME = "$(TARGET_NAME)";
+                                SDKROOT = watchos;
+                                SWIFT_EMIT_LOC_STRINGS = NO;
+                                SWIFT_VERSION = 5.0;
+                                TARGETED_DEVICE_FAMILY = 4;
+                                TEST_TARGET_NAME = "BatteryTracker Watch App";
+                                VALIDATE_PRODUCT = YES;
+                                WATCHOS_DEPLOYMENT_TARGET = 11.5;
+                        };
+                        name = Release;
+                };
+                A32A5A9EF5BEB6C41FC435E7 /* Debug */ = {
+                        isa = XCBuildConfiguration;
+                        buildSettings = {
+                                CODE_SIGN_STYLE = Automatic;
+                                CURRENT_PROJECT_VERSION = 1;
+                                DEVELOPMENT_TEAM = Y9DM8L58T3;
+                                GENERATE_INFOPLIST_FILE = YES;
+                                INFOPLIST_KEY_CFBundleDisplayName = BatteryWidget;
+                                LD_RUNPATH_SEARCH_PATHS = (
+                                        "$(inherited)",
+                                        "@executable_path/Frameworks",
+                                );
+                                MARKETING_VERSION = 1.0;
+                                PRODUCT_BUNDLE_IDENTIFIER = com.scrumcenter.BatteryWidget;
+                                PRODUCT_NAME = "$(TARGET_NAME)";
+                                SDKROOT = watchos;
+                                SWIFT_EMIT_LOC_STRINGS = YES;
+                                SWIFT_VERSION = 5.0;
+                                TARGETED_DEVICE_FAMILY = 4;
+                                WATCHOS_DEPLOYMENT_TARGET = 11.5;
+                        };
+                        name = Debug;
+                };
+                2F3B141E3C5F7F96ACA26514 /* Release */ = {
+                        isa = XCBuildConfiguration;
+                        buildSettings = {
+                                CODE_SIGN_STYLE = Automatic;
+                                CURRENT_PROJECT_VERSION = 1;
+                                DEVELOPMENT_TEAM = Y9DM8L58T3;
+                                GENERATE_INFOPLIST_FILE = YES;
+                                INFOPLIST_KEY_CFBundleDisplayName = BatteryWidget;
+                                LD_RUNPATH_SEARCH_PATHS = (
+                                        "$(inherited)",
+                                        "@executable_path/Frameworks",
+                                );
+                                MARKETING_VERSION = 1.0;
+                                PRODUCT_BUNDLE_IDENTIFIER = com.scrumcenter.BatteryWidget;
+                                PRODUCT_NAME = "$(TARGET_NAME)";
+                                SDKROOT = watchos;
+                                SWIFT_EMIT_LOC_STRINGS = YES;
+                                SWIFT_VERSION = 5.0;
+                                TARGETED_DEVICE_FAMILY = 4;
+                                VALIDATE_PRODUCT = YES;
+                                WATCHOS_DEPLOYMENT_TARGET = 11.5;
+                        };
+                        name = Release;
+                };
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -688,15 +816,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		778749872E2BC70400A8F70C /* Build configuration list for PBXNativeTarget "BatteryTracker Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				778749882E2BC70400A8F70C /* Debug */,
-				778749892E2BC70400A8F70C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
+                778749872E2BC70400A8F70C /* Build configuration list for PBXNativeTarget "BatteryTracker Watch AppUITests" */ = {
+                        isa = XCConfigurationList;
+                        buildConfigurations = (
+                                778749882E2BC70400A8F70C /* Debug */,
+                                778749892E2BC70400A8F70C /* Release */,
+                        );
+                        defaultConfigurationIsVisible = 0;
+                        defaultConfigurationName = Release;
+                };
+                99F7D2B2BB3AB105866AC4B3 /* Build configuration list for PBXNativeTarget "BatteryWidget" */ = {
+                        isa = XCConfigurationList;
+                        buildConfigurations = (
+                                A32A5A9EF5BEB6C41FC435E7 /* Debug */,
+                                2F3B141E3C5F7F96ACA26514 /* Release */,
+                        );
+                        defaultConfigurationIsVisible = 0;
+                        defaultConfigurationName = Release;
+                };
 /* End XCConfigurationList section */
 	};
 	rootObject = 7787494E2E2BC70200A8F70C /* Project object */;
