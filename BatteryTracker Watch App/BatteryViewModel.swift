@@ -18,6 +18,8 @@ class BatteryViewModel: ObservableObject {
         }
     }
 
+    private let maxHistoryDuration: TimeInterval = 24 * 60 * 60 // 24 hours
+
     private var timer: Timer?
     private let historyKey = "batteryHistory"
 
@@ -52,7 +54,8 @@ class BatteryViewModel: ObservableObject {
             level: WKInterfaceDevice.current().batteryLevel,
             state: WKInterfaceDevice.current().batteryState
         )
-        history.append(entry)
+        let cutoff = Date().addingTimeInterval(-maxHistoryDuration)
+        history = (history + [entry]).filter { $0.timestamp >= cutoff }
     }
 
     // MARK: - Persistence
@@ -66,7 +69,8 @@ class BatteryViewModel: ObservableObject {
     private func loadHistory() {
         if let data = UserDefaults.standard.data(forKey: historyKey),
            let decoded = try? JSONDecoder().decode([BatteryEntry].self, from: data) {
-            history = decoded
+            let cutoff = Date().addingTimeInterval(-maxHistoryDuration)
+            history = decoded.filter { $0.timestamp >= cutoff }
         }
     }
 }
