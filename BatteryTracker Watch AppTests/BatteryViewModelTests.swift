@@ -37,4 +37,10 @@ class BatteryViewModelTests: XCTestCase {
         let newVM = BatteryViewModel(skipInitialLog: true)
         XCTAssertEqual(newVM.logInterval, 300)
     }
+
+    func testTimerStartsOnInit() {
+        let viewModel = BatteryViewModel(skipInitialLog: true)
+        XCTAssertNotNil(viewModel.timer)
+        XCTAssertTrue(viewModel.timer?.isValid ?? false)
+    }
 }
