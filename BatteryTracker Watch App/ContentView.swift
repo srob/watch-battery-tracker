@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = BatteryViewModel()
+    @EnvironmentObject var viewModel: BatteryViewModel
 
     var body: some View {
         let now = Date()
@@ -14,6 +14,12 @@ struct ContentView: View {
 
                 Text("Current Level: \(Int(viewModel.batteryLevel * 100))%")
                 Text("Current State: \(stateDescription(viewModel.batteryState))")
+                Picker("Interval", selection: $viewModel.logInterval) {
+                    ForEach([5,10,15,20,30,60], id: \.self) { minutes in
+                        Text("\(minutes) min").tag(TimeInterval(minutes * 60))
+                    }
+                }
+                .pickerStyle(.navigationLink)
 
                 Divider()
 

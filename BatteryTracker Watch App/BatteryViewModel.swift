@@ -17,19 +17,27 @@ class BatteryViewModel: ObservableObject {
             saveHistory()
         }
     }
+    @Published var logInterval: TimeInterval {
+        didSet {
+            UserDefaults.standard.set(logInterval, forKey: intervalKey)
+            restartTimer()
+        }
+    }
 
     private var timer: Timer?
     private let historyKey = "batteryHistory"
+    private let intervalKey = "logInterval"
 
     init(skipInitialLog: Bool = false) {
         WKInterfaceDevice.current().isBatteryMonitoringEnabled = true
         self.batteryLevel = WKInterfaceDevice.current().batteryLevel
         self.batteryState = WKInterfaceDevice.current().batteryState
+        let savedInterval = UserDefaults.standard.double(forKey: intervalKey)
+        self.logInterval = savedInterval == 0 ? 600 : savedInterval
         loadHistory()
         if !skipInitialLog {
             logBatteryEntry()
         }
-        startTimer()
     }
 
     deinit {
@@ -38,12 +46,17 @@ class BatteryViewModel: ObservableObject {
     }
 
     private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 600, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: logInterval, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             self.batteryLevel = WKInterfaceDevice.current().batteryLevel
             self.batteryState = WKInterfaceDevice.current().batteryState
             self.logBatteryEntry()
         }
+    }
+
+    private func restartTimer() {
+        timer?.invalidate()
+        startTimer()
     }
 
     func logBatteryEntry() {

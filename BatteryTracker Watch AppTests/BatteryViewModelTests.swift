@@ -29,4 +29,12 @@ class BatteryViewModelTests: XCTestCase {
         XCTAssertEqual(filtered.count, 1)
         XCTAssertEqual(filtered.first?.level, 0.8)
     }
+
+    func testLogIntervalPersistence() {
+        UserDefaults.standard.removeObject(forKey: "logInterval")
+        let viewModel = BatteryViewModel(skipInitialLog: true)
+        viewModel.logInterval = 300
+        let newVM = BatteryViewModel(skipInitialLog: true)
+        XCTAssertEqual(newVM.logInterval, 300)
+    }
 }
