@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
+
+      - name: Run tests (watchOS)
+        run: |
+          xcodebuild test -scheme "BatteryTracker Watch App" -destination 'platform=watchOS Simulator,name=Apple Watch SE (44mm) (2nd generation)' | xcpretty

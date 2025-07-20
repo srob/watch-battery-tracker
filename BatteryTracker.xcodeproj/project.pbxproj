@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772294CF2E2D0E120037EEB2 /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 772294C02E2D0E120037EEB2 /* ci.yml */; };
+		772294E62E2D0E120037EEB2 /* copilot-instructions.md in Resources */ = {isa = PBXBuildFile; fileRef = 772294C22E2D0E120037EEB2 /* copilot-instructions.md */; };
 		775C4CE12E2D01EA00D5507A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE02E2D01EA00D5507A /* README.md */; };
 		775C4CE32E2D02A500D5507A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE22E2D02A500D5507A /* .gitignore */; };
 		7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -51,6 +53,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		772294C02E2D0E120037EEB2 /* ci.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ci.yml; sourceTree = "<group>"; };
+		772294C22E2D0E120037EEB2 /* copilot-instructions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "copilot-instructions.md"; sourceTree = "<group>"; };
 		775C4CE02E2D01EA00D5507A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		775C4CE22E2D02A500D5507A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		778749542E2BC70200A8F70C /* BatteryTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,9 +106,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772294C12E2D0E120037EEB2 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				772294C02E2D0E120037EEB2 /* ci.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
+		772294C32E2D0E120037EEB2 /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				772294C12E2D0E120037EEB2 /* workflows */,
+				772294C22E2D0E120037EEB2 /* copilot-instructions.md */,
+			);
+			path = .github;
+			sourceTree = "<group>";
+		};
 		7787494D2E2BC70200A8F70C = {
 			isa = PBXGroup;
 			children = (
+				772294C32E2D0E120037EEB2 /* .github */,
 				775C4CE22E2D02A500D5507A /* .gitignore */,
 				775C4CE02E2D01EA00D5507A /* README.md */,
 				7787495E2E2BC70200A8F70C /* BatteryTracker Watch App */,
@@ -268,6 +290,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				772294CF2E2D0E120037EEB2 /* ci.yml in Resources */,
+				772294E62E2D0E120037EEB2 /* copilot-instructions.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
