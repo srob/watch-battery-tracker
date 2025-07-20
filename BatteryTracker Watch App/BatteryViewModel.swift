@@ -26,7 +26,7 @@ class BatteryViewModel: ObservableObject {
 
     private let maxHistoryDuration: TimeInterval = 24 * 60 * 60 // 24 hours
 
-    private var timer: Timer?
+    private(set) var timer: Timer?
     private let historyKey = "batteryHistory"
     private let intervalKey = "logInterval"
 
@@ -40,6 +40,7 @@ class BatteryViewModel: ObservableObject {
         if !skipInitialLog {
             logBatteryEntry()
         }
+        startTimer()
     }
 
     deinit {
