@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct BatteryTracker_Watch_AppApp: App {
+struct BatteryTrackerApp: App {
+    @StateObject var batteryVM = BatteryViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(batteryVM)
         }
     }
 }
