@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775C4CE12E2D01EA00D5507A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE02E2D01EA00D5507A /* README.md */; };
+		775C4CE32E2D02A500D5507A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 775C4CE22E2D02A500D5507A /* .gitignore */; };
 		7787495B2E2BC70200A8F70C /* BatteryTracker Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		775C4CE02E2D01EA00D5507A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		775C4CE22E2D02A500D5507A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		778749542E2BC70200A8F70C /* BatteryTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7787495A2E2BC70200A8F70C /* BatteryTracker Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BatteryTracker Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		778749692E2BC70400A8F70C /* BatteryTracker Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BatteryTracker Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 		7787494D2E2BC70200A8F70C = {
 			isa = PBXGroup;
 			children = (
+				775C4CE22E2D02A500D5507A /* .gitignore */,
+				775C4CE02E2D01EA00D5507A /* README.md */,
 				7787495E2E2BC70200A8F70C /* BatteryTracker Watch App */,
 				7787496C2E2BC70400A8F70C /* BatteryTracker Watch AppTests */,
 				778749762E2BC70400A8F70C /* BatteryTracker Watch AppUITests */,
@@ -269,6 +275,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775C4CE12E2D01EA00D5507A /* README.md in Resources */,
+				775C4CE32E2D02A500D5507A /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
