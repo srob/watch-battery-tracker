@@ -20,4 +20,6 @@ jobs:
 
       - name: Run tests (watchOS)
         run: |
-            xcodebuild test -scheme "BatteryTracker Watch App" -destination 'platform=watchOS Simulator,name=Any watchOS Simulator Device' | xcpretty
+            xcodebuild test \
+              -scheme "BatteryTracker Watch App" \
+              -destination 'generic/platform=watchOS' | xcpretty
